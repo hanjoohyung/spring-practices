@@ -30,7 +30,7 @@
 		<br>
 	</c:forEach>
 	<p>
-		<a href="${pageContext.request.contextPath }/el?a=form">추가메일 등록</a>
+		<a href="${pageContext.request.contextPath }/form">추가메일 등록</a>
 	</p>
 	<br>
 </body>

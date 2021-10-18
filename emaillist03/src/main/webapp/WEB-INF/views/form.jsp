@@ -10,7 +10,6 @@
 		메일 리스트에 가입하려면,<br> 아래 항목을 기입하고 등록하기 버튼을 클릭하세요.
 	</p>
 	<form action="${pageContext.request.contextPath }/add" method="post">
-		<input type ='hidden' name ="a" value="add">
 		First name: <input type="text" name="firstName" value=""><br>
 		Last name: <input type="text" name="lastName" value=""><br>
 		Email address: <input type="text" name="email" value=""><br>
