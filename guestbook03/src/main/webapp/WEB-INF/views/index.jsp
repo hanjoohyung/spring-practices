@@ -27,14 +27,16 @@
 		</table>
 	</form>
 	<br>
+	<c:forEach items="${list }" var="vo">
 	<table width=600 border=2>
 		<tr>
 			<td>${vo.no }</td>
 			<td>이름 : ${vo.name }</td>
 			<td>시간 :${vo.reg_date }</td>
 			<td>메세지 : ${vo.message }</td>
-			<td><a href="${pageContext.request.contextPath }/deleteform&no=${vo.no }>">삭제</a></td>
+			<td><a href="${pageContext.request.contextPath }/deleteform">삭제</a></td>
 		</tr>
 	</table>
+	</c:forEach>
 </body>
 </html>

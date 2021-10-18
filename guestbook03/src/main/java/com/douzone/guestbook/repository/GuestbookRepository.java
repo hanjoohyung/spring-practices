@@ -8,8 +8,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import com.douzone.guestbook.vo.GuestbookVo;
 
+@Repository
 public class GuestbookRepository {
 
 	public List<GuestbookVo> findAll() {
@@ -143,11 +146,11 @@ public class GuestbookRepository {
 			conn = DriverManager.getConnection(url, "webdb", "webdb");
 
 			// 3. SQL 준비
-			String sql = "delete from guestbook where no=? and password=?";
+			String sql = "delete from guestbook where name=? and password=?";
 			pstmt = conn.prepareStatement(sql);
 
 			// 4. binding
-			pstmt.setLong(1, vo.getNo());
+			pstmt.setString(1, vo.getName());
 			pstmt.setString(2, vo.getPassword());
 
 			// 5. SQL 실행
