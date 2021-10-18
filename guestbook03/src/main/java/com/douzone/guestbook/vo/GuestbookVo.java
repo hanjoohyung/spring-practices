@@ -1,7 +1,5 @@
 package com.douzone.guestbook.vo;
 
-import java.time.LocalDate;
-
 public class GuestbookVo {
 	private Long no;
 	private String name;

@@ -23,13 +23,14 @@ public class EmaillistController {
 		return "/WEB-INF/views/index.jsp";
 	}
 	
-	@RequestMapping(value="/form", method=RequestMethod.POST)
+	@RequestMapping(value="/form", method=RequestMethod.GET)
 	public String form() {
 		return "/WEB-INF/views/form.jsp";
 	}
 	
 	@RequestMapping(value="/add", method=RequestMethod.POST)
 	public String add(EmaillistVo vo) {
+		emaillistRepository.insert(vo);
 		return "redirect:/";
 	}
 }

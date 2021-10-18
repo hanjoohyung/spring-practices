@@ -23,13 +23,14 @@ public class GuestbookController {
 		return "/WEB-INF/views/index.jsp";
 	}
 	
-	@RequestMapping(value="/deleteform", method=RequestMethod.POST)
+	@RequestMapping(value="/deleteform", method=RequestMethod.GET)
 	public String form() {
 		return "/WEB-INF/views/deleteform.jsp";
 	}
 	
 	@RequestMapping(value="/delete", method=RequestMethod.POST)
 	public String add(GuestbookVo vo) {
+		guestbookRepository.insert(vo);
 		return "redirect:/";
 	}
 }
