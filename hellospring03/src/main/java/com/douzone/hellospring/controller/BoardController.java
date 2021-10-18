@@ -1,6 +1,7 @@
 package com.douzone.hellospring.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -19,8 +20,8 @@ public class BoardController {
 	}
 	
 	@ResponseBody
-	@RequestMapping("/board/view")
-	public String view() {
-		return "BoardController.view()";
+	@RequestMapping("/board/view/{no}")
+	public String view(@PathVariable ("no") Long boardno) {
+		return "BoardController.view(" + boardno + ")";
 	}
 }
