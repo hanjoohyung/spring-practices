@@ -1,4 +1,4 @@
-package com.douzone.container.config.videosystem;
+package com.douzone.container.videosystem;
 
 public class Avengers implements DigitalVideoDisc {
 	private String title = "Avengers";
@@ -6,7 +6,7 @@ public class Avengers implements DigitalVideoDisc {
 	
 	@Override
 	public void play() {
-		System.out.println("Playing Movie " + studio + "'s" + title );
+		System.out.println("Playing Movie " + studio + "'s " + title);
 	}
 
 }
